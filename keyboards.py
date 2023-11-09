@@ -6,4 +6,5 @@ start_keyboard = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[[KeyboardBu
 randomizer = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[
     [
         KeyboardButton(text='В меню'),
-        KeyboardButton(text='Далее')]])
+        KeyboardButton(text='Далее')]
+])

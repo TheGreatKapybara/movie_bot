@@ -1,3 +1,4 @@
+from aiogram.methods import DeleteWebhook
 from aiogram.client.session.aiohttp import AiohttpSession
 from aiogram import Bot, types, Dispatcher, F
 from functions import hello_message, random_movies, main_menu
@@ -17,6 +18,7 @@ dp.message.register(main_menu, F.text == 'В меню')
 
 async def on_startup():
     try:
+        await bot(DeleteWebhook(drop_pending_updates=True))
         await dp.start_polling(bot)
     finally:
         await bot.session.close()
